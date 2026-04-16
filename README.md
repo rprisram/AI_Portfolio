@@ -1,8 +1,7 @@
-# 🤖 AI/ML Portfolio - Digital Twin (v2.0)
+# 🤖 AI/ML Portfolio - Digital Twin 
 
 A high-fidelity, production-grade portfolio designed to showcase 18+ years of technology leadership and cutting-edge GenAI/ML expertise. This site features a **"Digital Twin" AI Assistant** contextualized with exhaustive professional memory.
 
-**Live URL**: [https://priyaraman-ai-portfolio-76375761518.us-central1.run.app](https://priyaraman-ai-portfolio-76375761518.us-central1.run.app)
 
 ## 🌟 Key Features
 
