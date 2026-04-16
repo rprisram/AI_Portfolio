@@ -1,0 +1,282 @@
+{
+    "identity": {
+        "name": "Priya Raman",
+        "title": "GenAI Architect & Engineer",
+        "narrative": "Priya is a seasoned technology professional with 18+ years of record-breaking performance in building enterprise-scale solutions across Healthcare, Mobile, and Retail domains. She surgically transitioned from deep systems engineering (Senior Mobile Solution Architect / Principal Engineer I) to leading production-grade Generative AI. She doesn't just build POCs; she architects, implements, and deploys observable, reliable reasoning engines in the Cloud.",
+        "leadership_philosophy": "Priya leads through 'Architectural Empathy'—bridging the gap between stakeholders and deep technical execution. Having led teams at CVS Health and McDonalds, she treats AI agents not just as code, but as enterprise assets that require strict observability (Telemetry Gravity) and cost-efficiency (Nuclear Teardown).",
+        "production_philosophy": "She believes that 'Reliable Reasoning' is the only path to production GenAI. This means moving beyond simple RAG to 'Triangle of Truth' patterns, where every AI output is cross-referenced against literal truth, historical heuristic, and grounded context."
+    },
+    "career_timeline": [
+        {
+            "period": "Feb 2024 - March 2026",
+            "role": "Generative AI Architect & Engineer",
+            "company": "KSAP Technologies",
+            "impact": "Led technical strategy and delivery of multi-agent initiatives for enterprise supply chain platforms. Engineered autonomous multi-modal RAG pipelines leveraging FAISS and Reciprocal Rank Fusion (RRF) to parse complex unstructured documents. Architected intelligent data migration accelerators bridging Oracle PL/SQL with LLM query expansion. Pioneered advanced observability across 3-tier GCP GenAI deployments (Vertex AI, Cloud Run, API Gateway) to ensure high fault tolerance and self-healing QA automation."
+        },
+        {
+            "period": "March 2025 - Present",
+            "role": "Generative AI Architect & Engineer",
+            "company": "Self-Employed / Strategic Portfolios",
+            "impact": "Architecting sovereign multi-agent ecosystems and fine-tuned open-source LLMs (Llama 3.1, MLX local inference). Pioneered 'Telemetry Gravity' tied to Arize Phoenix and Custom High-Fidelity Evaluation frameworks. Engineered advanced RAG pipelines and custom MCP servers using Google ADK, LangGraph, LlamaIndex, and Vertex AI."
+        },
+        {
+            "period": "July 2024 - April 2025",
+            "role": "Foundational AI/ML Mastery (PGP)",
+            "company": "University of Texas, McCombs",
+            "impact": "Intensive fellowship specializing in high-fidelity reasoning, Neural Networks, Transfer Learning, and production-grade ML workflows."
+        },
+        {
+            "period": "Oct 2021 - Oct 2023",
+            "role": "Mobile Principal Engineer I",
+            "company": "CVS Health",
+            "impact": "Led enterprise-scale architecture for iOS and Android. Reduced app launch from 9 seconds to 300 milliseconds. Pioneered passwordless authentication and led large-scale microservices transformations."
+        },
+        {
+            "period": "Jan 2019 - Oct 2021",
+            "role": "Mobile Solution Architect / Mobile Lead",
+            "company": "McDonald's (Capgemini)",
+            "impact": "Architected multi-national iOS SDKs used by millions. Managed critical production stability across 5 global regions. Led DAST security remediation and secure payment integrations."
+        },
+        {
+            "period": "2015 - 2018",
+            "role": "iOS Developer",
+            "company": "Keevat LLC & Allstate",
+            "impact": "Engineered high-availability mobile systems for retail and healthcare. Applied distributed systems principles now used in modern RAG architectures."
+        },
+        {
+            "period": "2006 - 2015",
+            "role": "Facets ERP Oracle Developer / Tech Lead",
+            "company": "Cognizant",
+            "impact": "Managed large-scale relational databases. This foundation in data lineage and integrity is the core of her expertise in vector database optimization and data wrangling for LLMs."
+        }
+    ],
+    "technical_arsenal": {
+        "agentic_lifecycle": [
+            "Multi-Agent Orchestration (LangGraph, StateGraph)",
+            "Agentic RAG (Advanced Semantic Fusion, RRF)",
+            "Google Agent Development Kit (ADK)",
+            "LlamaIndex",
+            "PydanticAI",
+            "Arize Phoenix & Google Cloud Trace",
+            "Custom MCP Server Implementation"
+        ],
+        "high_performance_reasoning": [
+            "Gemini 3.0 Pro / 3.0 Flash",
+            "Llama 3.1 & 4B (Fine-tuned)",
+            "SFT (Supervised Fine-Tuning)",
+            "Ollama & MLX Optimization",
+            "GGUF Quantization",
+            "LLM-as-a-Judge Evaluation",
+            "Weights & Biases (W&B) Tracking"
+        ],
+        "mlops_cloud": [
+            "GCP Cloud Run",
+            "Vertex AI Endpoints",
+            "GCP AgentEngine",
+            "Docker",
+            "Artifact Registry",
+            "Workload Identity",
+            "Zero-Trust Security"
+        ],
+        "architecture_patterns": [
+            "High Fidelity Custom Evaluation Framework",
+            "Triangle of Truth (Multi-Modal Synthesis)",
+            "Telemetry Gravity (Observability)",
+            "Nuclear Teardown (FinOps)",
+            "Distributed Research Synthesis",
+            "Multi-Modal Reasoning Hub"
+        ]
+    },
+    "core_projects": [
+        {
+            "title": "Autonomous Supply Chain Agentic Orchestration",
+            "description": "A proprietary suite of production-grade autonomous systems for enterprise logistics, focusing on complex document extraction and agentic cloud migration.",
+            "tech_stack": [
+                "Google Agent Engine / ADK",
+                "LangGraph",
+                "LlamaIndex",
+                "FAISS / ChromaDB",
+                "OpenTelemetry (OTEL)",
+                "Vertex AI Endpoints",
+                "Cloud Run",
+                "API Gateway",
+                "Oracle PL/SQL"
+            ],
+            "innovations": [
+                "Multi-Modal Document Parsing: Engineered an ingestion pipeline utilizing Reciprocal Rank Fusion (RRF) and hierarchical chunking to autonomously parse complex, domain-specific logistics contracts.",
+                "Intelligent Cloud Migration: Combined LLM query expansion with foundational Oracle PL/SQL expertise to automate legacy data transformation logic.",
+                "Self-Healing QA Frameworks: Developed autonomous QA agents ensuring 100% adherence to complex business requirements across software release cycles.",
+                "Telemetry Gravity: Designed a unified observability pane merging disparate instrumentation from LlamaIndex and GoogleGenAI using OpenTelemetry."
+            ],
+            "visual_architecture": "Highly secure, 3-tier GenAI deployment on GCP utilizing Vertex AI Endpoints, Cloud Run, and API Gateway for maximum fault tolerance and minimal latency.",
+            "execution_evidence": "Proprietary deployment ensuring 100% compliance in quarterly release cycles and fully automated structured data extraction from unstructured supply chain documents."
+        },
+        {
+            "title": "Distributed Multi-Agent Research Orchestrator (DMARO)",
+            "description": "A sovereign agentic ecosystem inspired by Google's NotebookLM, capable of autonomous deep research and podcast generation.",
+            "tech_stack": [
+                "Google ADK",
+                "LangGraph",
+                "LlamaIndex",
+                "FastMCP",
+                "MLX-Audio",
+                "Arize Phoenix",
+                "Cloud Trace",
+                "zrok"
+            ],
+            "innovations": [
+                "Telemetry Gravity: Unified observability pipeline for multi-agent debugging across local and cloud environments.",
+                "Nuclear Teardown Protocol: FinOps-driven auto-scaling to eliminate idle cloud costs.",
+                "Smart Tool Pattern: Decoupled heavy compute (audio synthesis) from the core reasoning loop via MCP.",
+                "99% Payload Dieting: Optimized container images for Vertex AI runtime limits (<8MB)."
+            ],
+            "metrics": [
+                "< 2 min generation for 15 min audio",
+                "91% evaluation pass rate"
+            ],
+            "visual_architecture": "Features a Tri-Path Search Architecture (Literal BM25, Semantic Fusion with RRF, and Refined Synthesis) orchestrated via LangGraph. Uses a Cloud-to-Edge Bridge via Zrok tunnels for specialized Apple Silicon (MLX) audio synthesis.",
+            "video_demonstrations": [
+                {
+                    "feature": "Ingestion Pipeline",
+                    "url": "https://youtu.be/VPynVc0jHvM"
+                },
+                {
+                    "feature": "Arize Phoenix Local Trace",
+                    "url": "https://youtu.be/CSS4lVfnVXA"
+                },
+                {
+                    "feature": "MCP Server Audio",
+                    "url": "https://youtu.be/LQjvxHNY49k"
+                },
+                {
+                    "feature": "Automated Podcast Creation",
+                    "url": "https://youtu.be/6mdUp3NP6Qc"
+                },
+                {
+                    "feature": "BM25 Search",
+                    "url": "https://youtu.be/NrWAOC8qk7k"
+                },
+                {
+                    "feature": "BM25 + Grounded Search",
+                    "url": "https://youtu.be/b7nJ9wwUnkQ"
+                },
+                {
+                    "feature": "Semantic + Alternate Queries",
+                    "url": "https://youtu.be/6SLc1d5y7pQ"
+                },
+                {
+                    "feature": "Advanced Semantic + Grounded Chat",
+                    "url": "https://youtu.be/XE3LYkcJLH8"
+                },
+                {
+                    "feature": "MindMap Feature",
+                    "url": "https://youtu.be/HGTwMYlfhMc"
+                },
+                {
+                    "feature": "Study Guide Generation",
+                    "url": "https://youtu.be/0kp-2EOLT6w"
+                }
+            ]
+        },
+        {
+            "title": "Specialized Drug Interaction LLM",
+            "description": "An end-to-end Medical AI pipeline for fine-tuning and serving domain-specific models.",
+            "tech_stack": [
+                "Llama 3.1 8B",
+                "Unsloth",
+                "LoRA",
+                "llama.cpp",
+                "Vertex AI Endpoints",
+                "FastAPI",
+                "GCP API Gateway"
+            ],
+            "innovations": [
+                "331.68% Performance Increase over base model.",
+                "Secure 3-tier Cloud Deployment specifically for medical inference.",
+                "Medical Accuracy Score of 8.245/10 (vs 1.91 base)."
+            ],
+            "visual_architecture": "3-Tier Secure Cloud Deployment: Frontend (Gradio on Cloud Run) -> Security (API Gateway) -> Backend (FastAPI on Cloud Run) -> Inference (Vertex AI Endpoints with T4 GPUs with scale-to-zero logic).",
+            "video_demonstrations": [
+                {
+                    "feature": "3-Tier Production Architecture",
+                    "url": "https://youtu.be/kAfAzn4F0IE"
+                },
+                {
+                    "feature": "Local Inference (Ollama/MLX)",
+                    "url": "https://youtu.be/w63ubqj2j5A"
+                }
+            ]
+        },
+        {
+            "title": "Generative Bid Agent (RFP)",
+            "description": "Multi-modal RAG for automated RFP response generation and bid engineering.",
+            "tech_stack": [
+                "Google ADK",
+                "Vertex AI Search",
+                "Gemini Pro",
+                "Next.js",
+                "Ranking API"
+            ],
+            "innovations": [
+                "Triangle of Truth: Synthetic reasoning pattern cross-referencing Target RFP, Heuristic Logic, and Historical Story.",
+                "Forensic Accountant Logic: Actively derives underlying pricing formulas from heterogeneous documents.",
+                "Precision Citation: Exact document/sheet references for all generated answers."
+            ],
+            "visual_architecture": "Multi-Modal RAG Engine: Cross-references PDF (The Ask), Excel (The Logic), and PPT (The Story). Integrates with Vertex AI Search datastore for unstructured data retrieval.",
+            "execution_evidence": "Interactive HTML demos showcase real-time tool orchestration and Derivation Analysis, such as verifying QA effort staffing ratios (1 QA per 5 Devs) directly from Excel sheet assumptions."
+        },
+        {
+            "title": "GAIA Benchmark Master",
+            "description": "High-complexity orchestrator proven against the GAIA General assistant benchmark.",
+            "tech_stack": [
+                "LangGraph",
+                "Mem0",
+                "Tavily Search",
+                "Wikipedia Tool"
+            ],
+            "innovations": [
+                "Achieved 100% accuracy on GAIA benchmarks.",
+                "Advanced Memory: Leveraged Mem0 for SESSION-DECENTRALIZED persistent awareness."
+            ]
+        },
+        {
+            "title": "Priya's AI Portfolio & Reasoning Engine",
+            "description": "An Agentic Digital Twin portfolio built with Next.js and powered by a highly constrained, context-aware Gemini AI Assistant.",
+            "tech_stack": [
+                "Next.js 15",
+                "Gemini 2.5 Flash",
+                "Agentic Context Injection",
+                "Strict System Guardrails",
+                "Google Cloud Run",
+                "Docker"
+            ],
+            "innovations": [
+                "Agentic Contextualization: Synthesized 18+ years of professional history into a structured JSON memory for precise AI reasoning.",
+                "Strict Hallucination Guardrails: Engineered strict prompt boundaries ensuring the AI explicitly refuses beyond scope or knowledge boundary or ungrounded proprietary inquiries.",
+                "Cloud-Native Deployment: Fully containerized application deployed to GCP Cloud Run, utilizing Google Secret Manager for secure API key injection."
+            ],
+            "visual_architecture": "Next.js frontend coupled with a serverless Next.js API route acting as a secure intermediary to the Gemini API.",
+            "execution_evidence": "Live production Digital Twin operating on Google Cloud Run with rigorous refusal heuristics for OOS queries."
+        }
+    ],
+    "education": [
+        {
+            "degree": "Post Graduate Program in AI/ML",
+            "institution": "University of Texas, McCombs School of Business",
+            "period": "2024 - 2025",
+            "focus": "GenAI lifecycle, high-fidelity reasoning, and production LLMOps."
+        },
+        {
+            "degree": "Bachelor of Engineering in Electronics & Communication",
+            "institution": "Anna University, India",
+            "period": "2002 - 2006"
+        }
+    ],
+    "certifications": [
+        "Google Cloud Skill Badge: Multi-Agent Architectures",
+        "Hugging Face Agents Course",
+        "Hugging Face LLM Fundamentals",
+        "Hugging Face Fine-Tuning Models",
+        "Google 5 Day Gen AI Intensive (Kaggle Capstone)"
+    ]
+}

@@ -1,0 +1,207 @@
+.heroSection {
+    position: relative;
+    padding: 8rem 0 4rem;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.backgroundGlow {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--font-outfit);
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -2px;
+}
+
+.name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent-secondary);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.ctaContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    z-index: 10;
+}
+
+.primaryActions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.socialActions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primaryButton {
+    background: var(--foreground);
+    color: var(--background);
+    padding: 0 2rem;
+    border: none;
+}
+
+.secondaryButton {
+    background: transparent;
+    color: var(--accent-secondary);
+    border: 1px solid var(--accent-secondary);
+    padding: 0 1.5rem;
+    white-space: nowrap;
+}
+
+.socialIconButton {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    height: 44px;
+    padding: 0 1.25rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.socialIconButton:hover {
+    color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.briefCard {
+    padding: 3rem;
+    border-radius: 32px;
+    height: fit-content;
+}
+
+.briefTitle {
+    font-family: var(--font-outfit);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--accent-secondary);
+}
+
+.briefText {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.briefText strong {
+    color: var(--foreground);
+}
+
+.statsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.statValue {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+    font-family: var(--font-outfit);
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .heroSection {
+        padding: 6rem 0;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .ctaContainer {
+        flex-direction: column;
+    }
+
+    .briefCard {
+        padding: 2rem;
+    }
+}

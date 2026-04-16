@@ -1,0 +1,371 @@
+.card {
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(0, 240, 255, 0.2);
+}
+
+.header {
+    padding: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.title {
+    font-family: var(--font-outfit);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.techTag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-secondary);
+}
+
+.tabContainer {
+    display: flex;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.tabButton {
+    flex: 1;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.tabButton:hover {
+    color: var(--foreground);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.tabButton.active {
+    color: var(--accent-secondary);
+    border-bottom-color: var(--accent-secondary);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.contentArea {
+    padding: 2rem;
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.overviewTab {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.description {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.subTitle {
+    font-family: var(--font-outfit);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bulletList {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.bulletList li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.bulletList li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-secondary);
+}
+
+.infographicContainer {
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+}
+
+.infographic {
+    width: 100%;
+    display: block;
+}
+
+.docLinks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.docButton,
+.docButtonSecondary {
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.docButton {
+    background: var(--foreground);
+    color: var(--background);
+}
+
+.docButton:hover {
+    background: var(--accent-secondary);
+    color: var(--foreground);
+}
+
+.docButtonSecondary {
+    border: 1px solid var(--glass-border);
+    color: var(--foreground);
+}
+
+.docButtonSecondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.featuresScrollList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.featuresScrollList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.featuresScrollList::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 10px;
+}
+
+.featureCompactItem {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid var(--glass-border);
+}
+
+.featureLabel {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.overviewFooter {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.githubButton {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-secondary);
+    color: var(--accent-secondary);
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.githubButton:hover {
+    background: rgba(0, 240, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.featureHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.featureDesc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.htmlLaunchTag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--accent-secondary);
+    border: 1px solid var(--accent-secondary);
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.htmlLaunchArea {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.htmlButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.htmlButton:hover {
+    transform: scale(1.05);
+}
+
+.cardFooter {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.githubLink {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+}
+
+.githubLink:hover {
+    text-decoration: underline;
+}
+
+.infographicWrapper {
+    position: relative;
+    cursor: zoom-in;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.infographicWrapper:hover .expandOverlay {
+    opacity: 1;
+}
+
+.expandOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: 700;
+    color: white;
+}
+
+.htmlLaunchButton {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(138, 43, 226, 0.1));
+    border: 1px dashed var(--accent-secondary);
+    color: var(--accent-secondary);
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.modalContent {
+    position: relative;
+    max-width: 95%;
+    max-height: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.modalContent img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+}
+
+.closeButton {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.executionImageWrapper {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    margin-top: 0.5rem;
+}
+
+.executionImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}

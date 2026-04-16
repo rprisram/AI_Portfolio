@@ -1,0 +1,26 @@
+.projectsSection {
+    background: #080808;
+    position: relative;
+}
+
+.sectionTitle {
+    font-family: var(--font-outfit);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

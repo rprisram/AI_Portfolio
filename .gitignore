@@ -20,6 +20,9 @@
 # production
 /build
 
+# myref
+/.myRef
+
 # misc
 .DS_Store
 *.pem
