@@ -115,7 +115,7 @@ const projects = [
         github: 'https://github.com/rprisram/AI_Portfolio',
         highlights: [
             'Agentic Contextualization: Synthesized 18+ years of professional history into a structured JSON memory for precise AI reasoning.',
-            'Strict Hallucination Guardrails: Engineered strict prompt boundaries ensuring the AI explicitly refuses beyond scope or knowledge boundary or ungrounded proprietary inquiries.',
+            'Strict Reliability Guardrails: Engineered strict prompt boundaries ensuring the AI explicitly refuses beyond scope or knowledge boundary or ungrounded proprietary inquiries.',
             'Cloud-Native Deployment: Fully containerized application deployed to GCP Cloud Run, utilizing Google Secret Manager for secure API key injection.'
         ],
         features: []
