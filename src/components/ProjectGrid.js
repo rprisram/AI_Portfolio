@@ -6,7 +6,7 @@ const projects = [
         id: 0,
         title: 'Autonomous Supply Chain Agentic Orchestration',
         description: 'Proprietary enterprise logistics platform featuring autonomous document parsing and agentic legacy data migrations.',
-        tech: ['Google Agent Engine', 'LangGraph', 'LlamaIndex', 'FAISS', 'OpenTelemetry (OTEL)', 'Vertex AI Endpoints', 'Cloud Run', 'Oracle PL/SQL'],
+        tech: ['Google Agent Engine', 'LangGraph', 'LlamaIndex', 'FAISS', 'OpenTelemetry (OTEL)', 'Vertex AI Endpoints', 'Cloud Run', 'Oracle PL/SQL', 'Self-Healing Agents', 'Reflection Loops'],
         github: '', // Proprietary
         highlights: [
             'Multi-Modal Agentic Parsing: Designed an autonomous ingestion pipeline utilizing Reciprocal Rank Fusion (RRF) and hierarchical chunking to parse complex, unstructured domain-specific documents.',
@@ -119,6 +119,30 @@ const projects = [
             'Cloud-Native Deployment: Fully containerized application deployed to GCP Cloud Run, utilizing Google Secret Manager for secure API key injection.'
         ],
         features: []
+    },
+    {
+        id: 6,
+        title: 'Autonomous Career Operations Engine',
+        description: 'End-to-End AI-Agentic Job Application Architecture built natively within the Antigravity IDE. It autonomously evaluates roles, generates tailored assets, and executes browser-based applications with deterministic state management.',
+        tech: ['Antigravity IDE', 'Browser Subagent', 'SKILL.md Workflows', 'Python (urllib.parse)', 'YAML Database Management', 'Human-in-the-Loop (HITL)', 'Self-Healing Agents', 'Reflection Loops'],
+        github: 'https://github.com/rprisram/Autonomous_Career_Engine_Public',
+        fullWidth: true,
+        highlights: [
+            'SKILL.md Agentic Separation: Replaces traditional monolithic prompting with modular SKILL.md files chained via Workflows. This avoids context bloating by only loading necessary skill modules on demand.',
+            'Zero API / Token Costs: Driven entirely within the Antigravity IDE, bypassing expensive external API dependencies by dynamically leveraging the model quota (Claude and Gemini families) available from the AI Coding Assistant.',
+            'The Self-Healing Loop & Data Consolidation: Natively merges Resume & LinkedIn PDFs into a master experience-library.yaml. Dynamically pauses (HITL) to learn unknown application questions and permanently rewrites its knowledge base to never make the same mistake twice.',
+            'Headless State & Deterministic Anti-Blocking: Automates execution blindly from active-session.yaml. Bypasses tracking/auth walls natively via explicit programmatic intercepts and strict HITL login pauses before autonomous DOM HTML mapping.',
+            'Multi-Level Conditional Gating: Strict quantitative barrier logic mandates >90% scores across JD fit, ATS checks, and Recruiter reviews before the Apex Macro Orchestrator launches the browser subagent.'
+        ],
+        infographicLink: '/assets/projects/Auto_Career_Ops_Engine/Autonomous_Career_Operations_Engine.png',
+        architectureLink: '/assets/projects/Auto_Career_Ops_Engine/Autonomous_Career_Operations_Engine.pdf',
+        htmlSummaryLink: '/assets/projects/Auto_Career_Ops_Engine/career_engine_infographic.html',
+        features: [
+            {
+                label: 'Phase 1: Autonomous JD vs Profile Evaluation',
+                youtubeId: '2gQDgu0xYzo'
+            }
+        ]
     }
 ];
 

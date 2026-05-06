@@ -8,7 +8,7 @@ export default function ProjectCard({ project }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className={`${styles.card} glass`} id={`project-${project.id}`}>
+        <div className={`${styles.card} glass ${project.fullWidth ? styles.fullWidth : ''}`} id={`project-${project.id}`}>
             <div className={styles.header}>
                 <div className={styles.titleInfo}>
                     <h3 className={styles.title}>{project.title}</h3>
@@ -82,6 +82,11 @@ export default function ProjectCard({ project }) {
                             {project.shortformLink && (
                                 <a href={project.shortformLink} target="_blank" rel="noopener noreferrer" className={styles.docButtonSecondary}>
                                     Technical Summary (PDF)
+                                </a>
+                            )}
+                            {project.htmlSummaryLink && (
+                                <a href={project.htmlSummaryLink} target="_blank" rel="noopener noreferrer" className={styles.docButtonSecondary}>
+                                    Technical Summary (HTML)
                                 </a>
                             )}
                         </div>

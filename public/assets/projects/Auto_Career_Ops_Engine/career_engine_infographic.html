@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Career Operations Engine - Architecture Flow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #020617;
+            --bg-secondary: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-purple: #a855f7;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-gold: #f59e0b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-primary);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 85% 50%, rgba(16, 185, 129, 0.12) 0%, transparent 50%);
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        .infographic-container {
+            width: 100%;
+            max-width: 1600px;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            background: rgba(15, 23, 42, 0.2);
+            border-radius: 32px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 0 100px rgba(0,0,0,0.5) inset;
+        }
+
+        .header {
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr 1fr;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .column {
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: slideUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .column:nth-child(1) { animation-delay: 0.1s; }
+        .column:nth-child(2) { 
+            animation-delay: 0.3s; 
+            background: rgba(15, 23, 42, 0.7); 
+            border: 1px solid rgba(59, 130, 246, 0.25); 
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.15);
+        }
+        .column:nth-child(3) { animation-delay: 0.5s; }
+
+        .column-header {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .col-1-title { color: var(--accent-purple); }
+        .col-2-title { color: var(--accent-blue); }
+        .col-3-title { color: var(--accent-green); }
+
+        .node {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .node:hover {
+            transform: translateY(-4px);
+            z-index: 10;
+        }
+
+        .node-purple { border-left: 4px solid var(--accent-purple); }
+        .node-purple:hover { box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.4); }
+        
+        .node-blue { border-left: 4px solid var(--accent-blue); }
+        .node-blue:hover { box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4); }
+        
+        .node-green { border-left: 4px solid var(--accent-green); }
+        .node-green:hover { box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); }
+        
+        .node-gold { 
+            border: 1px solid rgba(245, 158, 11, 0.4); 
+            background: linear-gradient(135deg, rgba(2, 6, 23, 0.9), rgba(245, 158, 11, 0.1));
+            margin-top: auto;
+        }
+        .node-gold:hover { box-shadow: 0 0 50px rgba(245, 158, 11, 0.25); border-color: rgba(245, 158, 11, 0.7); transform: scale(1.02); }
+
+        .node h3 {
+            font-size: 1.1rem;
+            color: #e2e8f0;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        .node p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .code-path {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-purple);
+            background: rgba(168, 85, 247, 0.15);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .skills-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.15);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            margin-top: 0.75rem;
+            display: inline-block;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+            animation: pulse 2s infinite;
+        }
+
+        .flow-arrow.horizontal {
+            transform: rotate(-90deg);
+            margin: 0;
+            padding: 0 0.5rem;
+        }
+
+        .step-number {
+            background: var(--accent-blue);
+            color: white;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        .node-gold .step-number {
+            background: var(--accent-gold);
+            color: #000;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+        }
+
+        .col-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex: 1;
+        }
+
+        .orchestrator-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            height: 100%;
+        }
+
+        .row-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .feature-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            padding: 0.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ul-styled {
+            margin-top: 0.75rem;
+            list-style-type: none;
+            padding-left: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .ul-styled li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ul-styled li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-purple);
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.2; transform: scale(0.95); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+            100% { opacity: 0.2; transform: scale(0.95); }
+        }
+
+        /* Connecting lines for background tech feel */
+        .bg-lines {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            z-index: -1;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            border-radius: 32px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="infographic-container">
+    <div class="bg-lines"></div>
+    <div class="header">
+        <h1>Autonomous Career Operations Engine</h1>
+        <p>End-to-End AI-Agentic Job Application Architecture</p>
+    </div>
+
+    <div class="grid-layout">
+        
+        <!-- COLUMN 1: INGESTION -->
+        <div class="column">
+            <div class="column-header col-1-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                Context & Ingestion
+            </div>
+            <div class="col-content">
+                <div class="node node-purple">
+                    <div class="code-path">search/vault/</div>
+                    <h3>Raw Document Storage</h3>
+                    <p>Native dropping of Resume PDFs & LinkedIn Profiles directly into the secure vault.</p>
+                </div>
+                
+                <div class="flow-arrow">↓</div>
+                
+                <div class="node node-purple">
+                    <h3>Native LLM Parsing</h3>
+                    <p>Antigravity IDE dynamically processes structure without external dependencies like PyMuPDF.</p>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="node node-purple" style="flex: 1;">
+                    <div class="code-path">search/context/</div>
+                    <h3>Unified Knowledge Graph</h3>
+                    <p>Explicit, deduplicated YAML schemas acting as the single source of truth:</p>
+                    <ul class="ul-styled">
+                        <li><strong style="color:#e2e8f0">experience-library.yaml</strong><br>Merged Resume + LinkedIn</li>
+                        <li><strong style="color:#e2e8f0">interview-answers.yaml</strong><br>Visas, EEO, Salary requirements</li>
+                        <li><strong style="color:#e2e8f0">connection-tracker.yaml</strong><br>Network state & history</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMN 2: ORCHESTRATOR PIPELINE -->
+        <div class="column">
+            <div class="column-header col-2-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Sequential Workflows (.agent/workflows/)
+            </div>
+            
+            <div class="orchestrator-grid">
+                
+                <div class="row-flex">
+                    <div class="node node-blue" style="flex: 1;">
+                        <h3><span class="step-number">1</span> @evaluate-role</h3>
+                        <p>Grades JD Fit Score, reveals missing gaps, and runs ATS checks.</p>
+                        <div class="skills-tag">Skills: score-jd, ats-checker</div>
+                    </div>
+                    <div class="flow-arrow horizontal">↓</div>
+                    <div class="node node-blue" style="flex: 1;">
+                        <h3><span class="step-number">2</span> @cover-letter</h3>
+                        <p>Generates tailored letter mapping top 3 traits to the JD.</p>
+                        <div class="skills-tag">Skills: cover-letter</div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" style="margin: -0.25rem 0;">↓</div>
+
+                <div class="row-flex">
+                    <div class="node node-blue" style="flex: 1;">
+                        <h3><span class="step-number">3</span> @network-outreach</h3>
+                        <p>Distills product insights for recruiter messaging.</p>
+                        <div class="skills-tag">Skills: company-insight</div>
+                    </div>
+                    <div class="flow-arrow horizontal">↓</div>
+                    <div class="node node-blue" style="flex: 1;">
+                        <h3><span class="step-number">4</span> @auto-apply</h3>
+                        <p>Browser agent mapping YAML traits to HTML DOM inputs.</p>
+                        <div class="skills-tag">Subagent: DOM Mapping</div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow" style="margin: -0.25rem 0;">↓</div>
+
+                <div class="node node-gold">
+                    <h3><span class="step-number">5</span> @autonomous-orchestrator</h3>
+                    <p style="color: #cbd5e1; font-size: 1.05rem;">
+                        The Apex Macro. Checks if Fit/ATS >90%, auto-sanitizes URLs, auto-launches Easy Apply/Workday integrations natively, blindly reading from <strong style="color:white;">active-session.yaml</strong>.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- COLUMN 3: ENGINE CAPABILITIES -->
+        <div class="column">
+            <div class="column-header col-3-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Core Capabilities
+            </div>
+            <div class="col-content" style="gap: 1.5rem;">
+                
+                <div class="node node-green">
+                    <div class="feature-icon">👻</div>
+                    <h3>Headless State</h3>
+                    <p>Workflows run blindly via <code>active-session.yaml</code>. No need for the user to repeatedly specify target URLs.</p>
+                </div>
+
+                <div class="node node-green">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Deterministic Anti-Blocking</h3>
+                    <p><code>clean-url</code> programmatic intercept strips tracking hooks natively. Mandatory HITL pauses capture auth cookies.</p>
+                </div>
+
+                <div class="node node-green">
+                    <div class="feature-icon">🧬</div>
+                    <h3>Self-Healing Loop</h3>
+                    <p>When the browser agent hits unknown custom application questions, it asks the user, then permanently rewrites the YAML database.</p>
+                </div>
+
+                <div class="node node-green">
+                    <div class="feature-icon">🧩</div>
+                    <h3>Agentic Separation</h3>
+                    <p>Granular <code>.agent/skills/</code> (ATS Check, Recruiter Review) invoked by macro <code>.agent/workflows/</code>.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

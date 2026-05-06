@@ -58,7 +58,8 @@
             "LlamaIndex",
             "PydanticAI",
             "Arize Phoenix & Google Cloud Trace",
-            "Custom MCP Server Implementation"
+            "Custom MCP Server Implementation",
+            "Antigravity Native IDE Orchestration (SKILL.md)"
         ],
         "high_performance_reasoning": [
             "Gemini 3.0 Pro / 3.0 Flash",
@@ -79,12 +80,14 @@
             "Zero-Trust Security"
         ],
         "architecture_patterns": [
+            "Self-Healing Agents & Reflection Loops",
             "High Fidelity Custom Evaluation Framework",
             "Triangle of Truth (Multi-Modal Synthesis)",
             "Telemetry Gravity (Observability)",
             "Nuclear Teardown (FinOps)",
             "Distributed Research Synthesis",
-            "Multi-Modal Reasoning Hub"
+            "Multi-Modal Reasoning Hub",
+            "Deterministic Anti-Blocking & Headless State"
         ]
     },
     "core_projects": [
@@ -100,7 +103,9 @@
                 "Vertex AI Endpoints",
                 "Cloud Run",
                 "API Gateway",
-                "Oracle PL/SQL"
+                "Oracle PL/SQL",
+                "Self-Healing Agents",
+                "Reflection Loops"
             ],
             "innovations": [
                 "Multi-Modal Document Parsing: Engineered an ingestion pipeline utilizing Reciprocal Rank Fusion (RRF) and hierarchical chunking to autonomously parse complex, domain-specific logistics contracts.",
@@ -257,6 +262,35 @@
             ],
             "visual_architecture": "Next.js frontend coupled with a serverless Next.js API route acting as a secure intermediary to the Gemini API.",
             "execution_evidence": "Live production Digital Twin operating on Google Cloud Run with rigorous refusal heuristics for OOS queries."
+        },
+        {
+            "title": "Autonomous Career Operations Engine",
+            "description": "End-to-End AI-Agentic Job Application Architecture built natively within the Antigravity IDE. It evaluates roles, generates tailored cover letters, distills recruiter insights, and autonomously applies to jobs using deterministic sub-shell executions and headless state management.",
+            "tech_stack": [
+                "Antigravity IDE",
+                "Browser Subagent",
+                "SKILL.md (Agentic Workflows)",
+                "Python (urllib.parse)",
+                "YAML Database Management",
+                "Human-in-the-Loop (HITL)",
+                "Self-Healing Agents",
+                "Reflection Loops"
+            ],
+            "innovations": [
+                "SKILL.md Agentic Separation: Replaces monolithic prompting with modular SKILL.md files chained via Workflows. This avoids context bloating by only loading necessary skill modules on demand.",
+                "Zero API/Token Costs: Driven entirely within the Antigravity IDE, the architecture avoids expensive external endpoints by leveraging the model quota (Claude and Gemini families) available from the AI Coding Assistant.",
+                "The Self-Healing Loop: When the browser subagent encounters unknown application questions, it pauses for user input (HITL) and permanently rewrites the YAML database (interview-answers.yaml) to never make the same mistake twice.",
+                "Multi-Level Conditional Branching & Logic Gating: Orchestrator mandates an absolute >90% score calculation from three disparate expert skills (score-jd, ats-check, recruiter-review) before branching into programmatic browser execution.",
+                "Non-Destructive Multimodal Document Consolidation: Generates the ultimate source of truth by natively parsing and deduplicating Resume PDFs and LinkedIn Profiles into a master experience-library.yaml without external dependencies.",
+                "The Autonomous Apex Macro Orchestrator: A single, overarching command seamlessly manages state across disparate application environments (LinkedIn Easy Apply vs. Workday ATS), transforming isolated chat interactions into a deterministic programmatic event sequence.",
+                "Proactive URL Sanitization & HITL Authentication Injection: Bypasses aggressive tracking/auth walls by cleanly extracting IDs natively. Injects a strict Human-In-The-Loop pre-processing step for the browser subagent to enforce login pauses.",
+                "Headless Session State & Native Memory Grepping (Zero-Latency Deductions): Eliminates repetitive parameter passing via a globally managed CLI context (active-session.yaml). Leverages explicit grep_search across local memory to map abstract URLs instantly, avoiding costly WebFetch executions."
+            ],
+            "visual_architecture": "Features an overarching Apex Orchestrator bridging 'Context & Ingestion' (Native LLM Parsing) to 'Sequential Workflows' (Fit, Gap, ATS Check, DOM Input Mapping) empowered by headless state automation and deterministic anti-blocking. Uses SKILL.md for precise execution without context bloat.",
+            "execution_evidence": "Fully autonomous pipeline gracefully handling Easy Apply and Workday systems using native IDE tools with Zero API cost.",
+            "infographics": "/assets/projects/Auto_Career_Ops_Engine/Autonomous_Career_Operations_Engine.png",
+            "architecture_deep_dive": "/assets/projects/Auto_Career_Ops_Engine/Autonomous_Career_Operations_Engine.pdf",
+            "github_url": "https://github.com/rprisram/Autonomous_Career_Engine_Public"
         }
     ],
     "education": [

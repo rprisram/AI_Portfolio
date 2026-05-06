@@ -1,0 +1,107 @@
+  
+
+Autonomous Career Operations Engine
+===================================
+
+End-to-End AI-Agentic Job Application Architecture
+
+Context & Ingestion
+
+search/vault/
+
+### Raw Document Storage
+
+Native dropping of Resume PDFs & LinkedIn Profiles directly into the secure vault.
+
+↓
+
+### Native LLM Parsing
+
+Antigravity IDE dynamically processes structure without external dependencies like PyMuPDF.
+
+↓
+
+search/context/
+
+### Unified Knowledge Graph
+
+Explicit, deduplicated YAML schemas acting as the single source of truth:
+
+*   **experience-library.yaml**  
+    Merged Resume + LinkedIn
+*   **interview-answers.yaml**  
+    Visas, EEO, Salary requirements
+*   **connection-tracker.yaml**  
+    Network state & history
+
+Sequential Workflows (.agent/workflows/)
+
+### 1 @evaluate-role
+
+Grades JD Fit Score, reveals missing gaps, and runs ATS checks.
+
+Skills: score-jd, ats-checker
+
+↓
+
+### 2 @cover-letter
+
+Generates tailored letter mapping top 3 traits to the JD.
+
+Skills: cover-letter
+
+↓
+
+### 3 @network-outreach
+
+Distills product insights for recruiter messaging.
+
+Skills: company-insight
+
+↓
+
+### 4 @auto-apply
+
+Browser agent mapping YAML traits to HTML DOM inputs.
+
+Subagent: DOM Mapping
+
+↓
+
+### 5 @autonomous-orchestrator
+
+The Apex Macro. Checks if Fit/ATS >90%, auto-sanitizes URLs, auto-launches Easy Apply/Workday integrations natively, blindly reading from **active-session.yaml**.
+
+Core Capabilities
+
+👻
+
+### Headless State
+
+Workflows run blindly via `active-session.yaml`. No need for the user to repeatedly specify target URLs.
+
+🛡️
+
+### Deterministic Anti-Blocking
+
+`clean-url` programmatic intercept strips tracking hooks natively. Mandatory HITL pauses capture auth cookies.
+
+🧬
+
+### Self-Healing Loop
+
+When the browser agent hits unknown custom application questions, it asks the user, then permanently rewrites the YAML database.
+
+🧩
+
+### Agentic Separation
+
+Granular `.agent/skills/` (ATS Check, Recruiter Review) invoked by macro `.agent/workflows/`.
+
+
+
+these are NOT .py files rather these are skill based workflows. all are .md files that helps in preventing contextual bloating.
+
+- Should have all of my accomplishments, flows and highlights covered,
+- Should have initial setup skill highlighted too
+- Should focus on the fact that its Antigravity IDE drive - NOT API key based. So, leveraging Family of Models available within the IDE and its quota.

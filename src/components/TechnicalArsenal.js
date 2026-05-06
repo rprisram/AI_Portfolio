@@ -3,7 +3,7 @@ import styles from './TechnicalArsenal.module.css';
 const skills = [
     {
         category: 'Agentic Lifecycle & NLP',
-        items: ['Multi-Agent Orchestration (LangGraph, StateGraph)', 'Agentic RAG (Advanced Semantic Fusion, RRF)', 'Google Agent Development Kit (ADK)', 'LlamaIndex', 'PydanticAI', 'Arize Phoenix & Google Cloud Trace', 'Custom MCP Server Implementation']
+        items: ['Multi-Agent Orchestration (LangGraph, StateGraph)', 'Agentic RAG (Advanced Semantic Fusion, RRF)', 'Google Agent Development Kit (ADK)', 'LlamaIndex', 'PydanticAI', 'Arize Phoenix & Google Cloud Trace', 'Custom MCP Server Implementation', 'Antigravity Native IDE Orchestration (SKILL.md)']
     },
     {
         category: 'High-Performance Reasoning',
@@ -15,7 +15,7 @@ const skills = [
     },
     {
         category: 'Advanced Architecture Patterns',
-        items: ['High Fidelity Custom Evaluation Framework', 'Triangle of Truth (Multi-Modal Synthesis)', 'Telemetry Gravity (Observability)', 'Nuclear Teardown (FinOps)', 'Distributed Research Synthesis', 'Multi-Modal Reasoning Hub']
+        items: ['Self-Healing Agents & Reflection Loops', 'High Fidelity Custom Evaluation Framework', 'Triangle of Truth (Multi-Modal Synthesis)', 'Telemetry Gravity (Observability)', 'Nuclear Teardown (FinOps)', 'Distributed Research Synthesis', 'Multi-Modal Reasoning Hub', 'Deterministic Anti-Blocking & Headless State']
     },
     {
         category: 'Foundational AI/ML Systems',
