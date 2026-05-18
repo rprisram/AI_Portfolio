@@ -59,7 +59,9 @@
             "PydanticAI",
             "Arize Phoenix & Google Cloud Trace",
             "Custom MCP Server Implementation",
-            "Antigravity Native IDE Orchestration (SKILL.md)"
+            "Antigravity Native IDE Orchestration (SKILL.md)",
+            "Tools-as-Agents Topology (Grounding LLM-Bypass)",
+            "FastMCP & Zrok HTTP-SSE Reverse Tunnels"
         ],
         "high_performance_reasoning": [
             "Gemini 3.0 Pro / 3.0 Flash",
@@ -68,7 +70,8 @@
             "Ollama & MLX Optimization",
             "GGUF Quantization",
             "LLM-as-a-Judge Evaluation",
-            "Weights & Biases (W&B) Tracking"
+            "Weights & Biases (W&B) Tracking",
+            "Real-Time SSE Asynchronous Generator Relay"
         ],
         "mlops_cloud": [
             "GCP Cloud Run",
@@ -77,7 +80,12 @@
             "Docker",
             "Artifact Registry",
             "Workload Identity",
-            "Zero-Trust Security"
+            "Zero-Trust Security",
+            "GCP Cloud Run (Monolithic Single-Container Multi-Process Topology)",
+            "POSIX Process Multiplexing & Private TCP Loopback IPC (<1ms)",
+            "AMD64 Cross-Architecture Compilation (GCP Cloud Build)",
+            "V4 Cryptographic Signed URLs (Remote GCS IAM Signing)",
+            "Vertex AI Search Data Ingestion & Grounding Integration"
         ],
         "architecture_patterns": [
             "Self-Healing Agents & Reflection Loops",
@@ -87,7 +95,12 @@
             "Nuclear Teardown (FinOps)",
             "Distributed Research Synthesis",
             "Multi-Modal Reasoning Hub",
-            "Deterministic Anti-Blocking & Headless State"
+            "Deterministic Anti-Blocking & Headless State",
+            "Tools-as-Agents Latency Optimization (LLM reasoning-bypass)",
+            "Telemetry Gravity Observability Switch (Local Arize / GCP Trace)",
+            "Nuclear Teardown Protocol (FinOps Automation for Idle Compute)",
+            "Smart Tool Self-Polling Event-Listener & LRO Ejection Pattern",
+            "Monolithic Single-Container Multi-Process Topology"
         ]
     },
     "core_projects": [
@@ -118,7 +131,7 @@
         },
         {
             "title": "Distributed Multi-Agent Research Orchestrator (DMARO)",
-            "description": "A sovereign agentic ecosystem inspired by Google's NotebookLM, capable of autonomous deep research and podcast generation.",
+            "description": "A sovereign agentic ecosystem inspired by Google's NotebookLM, capable of autonomous deep research and podcast generation, fully migrated to a serverless monolithic single-container multi-process architecture.",
             "tech_stack": [
                 "Google ADK",
                 "LangGraph",
@@ -127,17 +140,39 @@
                 "MLX-Audio",
                 "Arize Phoenix",
                 "Cloud Trace",
-                "zrok"
+                "zrok",
+                "GCP Cloud Run (Monolithic Single-Container)",
+                "Tools-as-Agents Topology",
+                "Tri-Path Search (BM25 + Semantic + RRF)",
+                "POSIX Process Multiplexer",
+                "Private TCP Loopback IPC (<1ms)",
+                "Telemetry Gravity Switch",
+                "Nuclear Teardown Protocol (FinOps)",
+                "GCS Signed URLs (Remote IAM)",
+                "LLM-as-a-Judge RAG Triad Evaluation",
+                "Zero-Trust IAM & Secret Manager",
+                "GCP Cloud Build (AMD64 Parity)",
+                "Docker",
+                "Gradio UI",
+                "Vertex AI & Vertex Search"
             ],
             "innovations": [
                 "Telemetry Gravity: Unified observability pipeline for multi-agent debugging across local and cloud environments.",
                 "Nuclear Teardown Protocol: FinOps-driven auto-scaling to eliminate idle cloud costs.",
                 "Smart Tool Pattern: Decoupled heavy compute (audio synthesis) from the core reasoning loop via MCP.",
-                "99% Payload Dieting: Optimized container images for Vertex AI runtime limits (<8MB)."
+                "99% Payload Dieting: Optimized container images for Vertex AI runtime limits (<8MB).",
+                "Monolithic Single-Container Multi-Process Topology: Co-located the Next.js UI (standalone Node.js 20 build) and the Python 3.11 ADK backend inside a single Cloud Run container using sub-millisecond private local loopback IPC (<1ms) and a custom POSIX process multiplexer, slashing compute costs by 90%.",
+                "Tools-as-Agents Architecture Shift: Converted deterministic grounding tools (Vertex Search, NER, Google Insights) into native sub-agents via strict Pydantic schemas, reducing retrieval latency from 38s down to 10.2s while maintaining 100% trace visibility, async Model API calls and circumventing Reasoning Tax levied by LLM Agents.",
+                "Stateless GCS Remote Signed URLs: Overcame container ephemeral limits by moving vector databases and audio assets to GCS. Configured IAM remote signing with the 'Service Account Token Creator' role to securely generate cryptographically stable V4 Signed URLs for direct browser audio streaming.",
+                "LLM-as-a-Judge RAG Triad Bridge: Engineered a custom RAG Triad evaluator using a 10-line Python iterator to capture hidden tool trajectories and validate against JSON rubrics, achieving a 91% aggregate pass rate."
             ],
             "metrics": [
                 "< 2 min generation for 15 min audio",
-                "91% evaluation pass rate"
+                "91% evaluation pass rate",
+                "Slashed compute billing by 90% via Cloud Run monolithic co-location",
+                "Reduced multi-agent execution latency from 38s down to 10.2s via Tools-as-Agents topology",
+                "<1ms sub-millisecond network communication overhead via private TCP Loopback IPC",
+                "Generated 20-minute high-fidelity podcast audio in 3 minutes via remote FastMCP Apple Silicon bridge"
             ],
             "visual_architecture": "Features a Tri-Path Search Architecture (Literal BM25, Semantic Fusion with RRF, and Refined Synthesis) orchestrated via LangGraph. Uses a Cloud-to-Edge Bridge via Zrok tunnels for specialized Apple Silicon (MLX) audio synthesis.",
             "video_demonstrations": [
@@ -146,8 +181,16 @@
                     "url": "https://youtu.be/VPynVc0jHvM"
                 },
                 {
+                    "feature": "Cloud Run Ingestion: Vertex AI Search",
+                    "url": "https://youtu.be/72JdCa9AN38"
+                },
+                {
                     "feature": "Arize Phoenix Local Trace",
                     "url": "https://youtu.be/CSS4lVfnVXA"
+                },
+                {
+                    "feature": "Cloud Run Podcast Pipeline",
+                    "url": "https://youtu.be/DVN7964a7c4"
                 },
                 {
                     "feature": "MCP Server Audio",

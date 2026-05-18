@@ -7,7 +7,7 @@ A high-fidelity, production-grade portfolio designed to showcase 18+ years of te
 
 - **Digital Twin AI Assistant**: A specialized reasoning engine (Gemini 2.5 Flash) injected with 18+ years of career history, architectural whitepapers, and project metadata.
 - **Architectural Sight**: The AI can perform visual deep-dives into flow diagrams (PNGs) and cite evidence from interactive execution demos (HTMLs).
-- **Video Concierge Library**: 10+ production feature demonstrations mapped to clickable Markdown hyperlinks within the chat.
+- **Video Concierge Library**: 12+ production feature demonstrations mapped to clickable Markdown hyperlinks within the chat.
 - **Enterprise Case Studies**: Deep-dives into **DMARO** (Orchestration), **RFP Intelligence** (Agentic RAG), and **DDI Fine-Tuning** (Hybrid Compute).
 - **Telemetry Gravity Architecture**: Built-in instrumentation for enterprise-grade observability.
 

@@ -11,7 +11,8 @@ const projects = [
         highlights: [
             'Multi-Modal Agentic Parsing: Designed an autonomous ingestion pipeline utilizing Reciprocal Rank Fusion (RRF) and hierarchical chunking to parse complex, unstructured domain-specific documents.',
             'Intelligent Data Migration: Developed an automated transformation accelerator combining LLM query expansion with deep relational database (PL/SQL) expertise for seamless cloud migrations.',
-            'Self-Healing QA & Observability: Engineered custom evaluation frameworks for automated release testing, backed by a unified "Telemetry Gravity" observability pattern using OTEL.'
+            'Self-Healing QA: Developed autonomous QA agents ensuring 100% adherence to complex business requirements across software release cycles.',
+            'Observability: Engineered custom evaluation frameworks for automated release testing, backed by a unified "Telemetry Gravity" observability pattern using OTEL.'
         ],
         infographicLink: '',
         architectureLink: '',
@@ -20,21 +21,39 @@ const projects = [
     {
         id: 1,
         title: 'Distributed Multi-Agent Research Orchestrator',
-        description: 'A sovereign agentic ecosystem leveraging Google Agent Development Kit (ADK), LangGraph orchestration, and advanced RAG using LlamaIndex and Model Context Protocol (MCP).',
-        tech: ['Google Agent Development Kit (ADK)', 'LangGraph (StateGraph)', 'LlamaIndex', 'Arize Phoenix & Google Cloud Trace', 'zrok', 'Gradio', 'Vertex AI', 'Custom MCP Server', 'Docker'],
+        description: 'A sovereign NotebookLM-inspired agentic ecosystem built with Google ADK and LangGraph, consolidated into a Cloud Run Monolithic Single-Container with LlamaIndex and MCP RAG.',
+        tech: [
+            'Google Agent Development Kit (ADK)',
+            'LangGraph (StateGraph)',
+            'LlamaIndex',
+            'Arize Phoenix & Google Cloud Trace',
+            'zrok HTTP-SSE Tunneling',
+            'Vertex AI & Vertex Search',
+            'Custom MCP Server (FastMCP)',
+            'Docker Containerization',
+            'GCP Cloud Run (Monolithic Single-Container)',
+            'Tools-as-Agents Topology',
+            'Zero-Trust IAM & Secret Manager'
+
+        ],
         github: 'https://github.com/rprisram/NotebookLM-Clone',
+        githubLabel: 'Orchestrator Code (GitHub)',
+        github2: 'https://github.com/rprisram/agenticaudiolab',
+        github2Label: 'Audio Lab Module (GitHub)',
         highlights: [
-            'Extreme Performance: < 2 min end-to-end generation for a 15-minute high-fidelity podcast.',
-            'High Fidelity Custom Evaluation: 91% aggregate pass rate via custom JSON rubric evaluators.',
-            'Unified Telemetry: Pioneered "Telemetry Gravity" pattern to merge instrumentation into a single pane of glass.',
-            'Advanced RAG: Engineered SOTA retrieval engine using Reciprocal Rank Fusion (RRF) and hierarchical chunking.'
+            'Extreme Performance: 15 Min podcast generation under 2 minutes and cut compute costs by 90% via a monolithic Cloud Run container running sub-millisecond loopback (<1ms).',
+            'Advanced RAG & Latency Defeat: Engineered SOTA Tri-Path Search (BM25 + Semantic + RRF) and reduced RAG latency from 38s down to 10.2s via native, Tools-as-Agents grounding.',
+            'Unified Telemetry: Pioneered "Telemetry Gravity" pattern to merge instrumentation into a single pane of glass',
+            'High-Fidelity Evaluation: 91% aggregate pass rate via custom JSON rubric evaluators.'
         ],
         architectureLink: '/assets/projects/Dist_Multi_Agent_Res_Orch/Distributed_Multi_Agent_Research_orchestrator.pdf',
         shortformLink: '/assets/projects/Dist_Multi_Agent_Res_Orch/Distributed_Multi_Agent_Research_orchestrator_ShortForm.pdf',
         infographicLink: '/assets/projects/Dist_Multi_Agent_Res_Orch/DMARO.png',
         features: [
             { label: 'Ingestion: LlamaIndex/LLMSherpa Pipeline', youtubeId: 'VPynVc0jHvM' },
+            { label: 'Cloud Run Ingestion: Vertex AI Search', youtubeId: '72JdCa9AN38' },
             { label: 'Arize Phoenix Local Trace', youtubeId: 'CSS4lVfnVXA' },
+            { label: 'Cloud Run Podcast Pipeline', youtubeId: 'DVN7964a7c4' },
             { label: 'MCP Server Audio (GCP Observability)', youtubeId: 'LQjvxHNY49k' },
             { label: 'Automated Podcast Creation', youtubeId: '6mdUp3NP6Qc' },
             { label: 'BM25 Only Search', youtubeId: 'NrWAOC8qk7k' },

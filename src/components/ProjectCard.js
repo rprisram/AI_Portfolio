@@ -55,11 +55,18 @@ export default function ProjectCard({ project }) {
                                 ))}
                             </ul>
                         </div>
-                        {project.github && (
+                        {(project.github || project.github2) && (
                             <div className={styles.overviewFooter}>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
-                                    {project.githubLabel || 'View Source Code (GitHub)'} →
-                                </a>
+                                {project.github && (
+                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.githubButton}>
+                                        {project.githubLabel || 'View Source Code (GitHub)'} →
+                                    </a>
+                                )}
+                                {project.github2 && (
+                                    <a href={project.github2} target="_blank" rel="noopener noreferrer" className={styles.githubButtonSecondary}>
+                                        {project.github2Label || 'View Audio Module (GitHub)'} →
+                                    </a>
+                                )}
                             </div>
                         )}
                     </div>
