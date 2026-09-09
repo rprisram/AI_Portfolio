@@ -8,12 +8,6 @@
     },
     "career_timeline": [
         {
-            "period": "June 2026 - Present",
-            "role": "AI Engineering Architect",
-            "company": "Cyclotron",
-            "impact": "AI Engineering Architect on a multi-workstream Azure AI Foundry enablement engagement for a top-25 U.S. regional bank. Owns prompt design, the evaluation engine, hallucination mitigation, and agent architecture recommendations across two workstreams: an Azure AI Foundry platform (Anthropic Claude via Azure AI Foundry MaaS, brokered through an Azure API Management AI Gateway with private networking, Entra ID authentication, and zero standing secrets) and an SDLC compliance agent that scores Solution Architecture Documents against a versioned, governance-owned rubric with a full production audit trail."
-        },
-        {
             "period": "Feb 2024 - March 2026",
             "role": "Generative AI Architect & Engineer",
             "company": "KSAP Technologies",
@@ -110,35 +104,6 @@
         ]
     },
     "core_projects": [
-        {
-            "title": "Enterprise SDLC Compliance Agent, Azure AI Foundry Platform",
-            "description": "A production agentic system for a top-25 U.S. regional bank that replaces manual review of 70 to 100 page Solution Architecture Documents with a governed, auditable, two-pass Claude scoring pipeline, delivered end to end on a zero-trust Azure AI Foundry platform.",
-            "tech_stack": [
-                "Anthropic Claude, tiered model routing (Azure AI Foundry, Anthropic MaaS)",
-                "Azure API Management (AI Gateway, two-hop token brokering)",
-                "Microsoft Entra ID / DefaultAzureCredential (zero standing secrets)",
-                "Azure Container Apps",
-                "Anthropic SDK",
-                "Azure Blob Storage (immutable audit trail)",
-                "Azure Application Insights (structured, per-call telemetry)",
-                "Model-Agnostic Agent Router (Claude lane + Microsoft Agent Framework lane)",
-                "Two-Pass Agentic Scoring Architecture",
-                "Anthropic Prompt Caching (ephemeral cache_control)",
-                "Versioned Prompt and Rubric Governance",
-                "Zero-API-Call Cost Estimator"
-            ],
-            "innovations": [
-                "Two-Pass Agentic Architecture: Separated verbatim evidence extraction (Pass 1, one call on a stronger primary model) from parallel per-domain scoring (Pass 2, seven parallel calls delegated to cheaper sub-agents), removing early-criteria anchoring and hallucinated evidence, with wall-clock time bound to the slowest domain rather than the sum of all domains.",
-                "Zero-Trust AI Gateway: Architected two-hop token brokering through Azure API Management so the calling application's credential never reaches the model. The app's Entra ID JWT is validated at the gateway, which mints a separate Managed Identity token to reach the model, with zero standing secrets end to end.",
-                "Deterministic Rubric Over Retrieval: Selected a full-document, in-context, deterministic scoring rubric over a RAG approach, prioritizing complete document coverage and exact-clause evidence citation over retrieval's chunk-boundary loss, added cost, and latency profile.",
-                "Production Cache Optimization: Implemented ephemeral cache breakpoints, warm-cache priming calls, and Turn-2 output capping (max tokens=1) so resent Turn-1 history is served from cache, lifting mean prompt-cache hit to 64.6% (up to 71.8%) across 33 production runs and materially cutting per-run token cost.",
-                "Versioned Prompt and Rubric Governance: Built MAJOR/MINOR semantic versioning for every prompt and rubric criterion, with rubric, config, and prompt versions stamped on every scored output and a one-line rollback path requiring no redeploy.",
-                "Telemetry & Session Cost Visibility: Instrumented Azure Application Insights telemetry (run/job/correlation-ID tagged) feeding a live HTML dashboard (API calls, cache performance, domain breakdown, borrowed-evidence tracking), alongside a zero-API-call pre-flight cost estimator accurate to within approximately 2% of the actual invoice, giving full session-level cost visibility.",
-                "Independently Convergent with Industry Practice: Uber Engineering's own published case study (95% cache hit, $1.84 avg/query) independently arrived at the same three optimization patterns used here, caching between turns, tiered model delegation, and session-level cost visibility, neither adopted from the other."
-            ],
-            "visual_architecture": "Model-agnostic agent router on Azure Container Apps calling Anthropic Claude via Azure AI Foundry (Anthropic MaaS), mediated end to end through an Azure API Management AI Gateway performing two-hop token brokering (Entra ID JWT validation, then a separate Managed Identity token to the model), with structured per-call telemetry to Application Insights and an immutable audit trail in Azure Blob Storage.",
-            "execution_evidence": "Verified across 33 real production scoring runs on 14 client documents; every figure above is drawn from real HTML assessment reports and calibration logs rather than a projection."
-        },
         {
             "title": "Autonomous Supply Chain Agentic Orchestration",
             "description": "A proprietary suite of production-grade autonomous systems for enterprise logistics, focusing on complex document extraction and agentic cloud migration.",

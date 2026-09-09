@@ -4,6 +4,40 @@ import styles from './ProjectGrid.module.css';
 const projects = [
     {
         id: 0,
+        fullWidth: true,
+        title: 'Enterprise SDLC Compliance Agent: Azure AI Foundry Platform',
+        description: 'A production agentic system for a top-25 U.S. regional bank that replaces manual review of 70 to 100 page Solution Architecture Documents with a governed, auditable, two-pass Claude scoring pipeline, delivered end to end on a zero-trust Azure AI Foundry platform.',
+        tech: [
+            'Anthropic Claude (Tiered Model Routing)',
+            'Azure AI Foundry (Anthropic MaaS)',
+            'Azure API Management (AI Gateway)',
+            'Microsoft Entra ID (Zero Standing Secrets)',
+            'Azure Container Apps',
+            'Anthropic SDK',
+            'Azure Blob Storage (Immutable Audit Trail)',
+            'Azure Application Insights',
+            'Model-Agnostic Agent Router',
+            'Anthropic Prompt Caching',
+            'Versioned Prompt & Rubric Governance',
+            'Zero-API-Call Cost Estimator'
+        ],
+        github: '', // Proprietary
+        highlights: [
+            'Deterministic Rubric Scoring: Selected full-document, in-context evaluation over a RAG-based approach, scored against a standardized, weighted rubric.',
+            'Cache-Optimized Cost Engineering: Ephemeral cache breakpoints, warm-cache priming call, and Turn-2 output capping (max tokens=1) so resent Turn-1 history is served from cache, lifting mean prompt-cache hit to 64.6% (up to 71.8%).',
+            'Independently Convergent with Industry Practice: Uber Engineering\'s own published case study (95% cache hit, $1.84 avg/query) independently arrived at the same three optimizations used here, cross-turn caching, tiered model delegation, and session-level cost visibility, confirming convergence rather than imitation.',
+            'Zero-Trust AI Gateway: Architected two-hop token brokering through Azure API Management.',
+            'Telemetry & Session Cost Visibility: HTML dashboard (API calls, cache performance, domain breakdown, borrowed-evidence tracking), alongside a zero-API-call pre-flight cost estimator accurate to within approximately 2% of the actual invoice, giving full session-level cost visibility.',
+            'Versioned Prompt Governance: Every prompt and rubric criterion ships as an immutable, semantically versioned artifact, with rubric, config, and prompt versions stamped on every output and a one-line rollback path.',
+            'Dynamic Model Routing[APIM & Code Config]: Document metadata (size, gate, diagram density) drives model selection between a stronger primary model and cheaper parallel sub-agents, with a safe default that never hard-fails.',
+            'Layered Content Guardrails: Enforces two independent safety layers, an inline Azure API Management content-safety policy and Anthropic\'s own native constitutional-AI classifiers.'
+        ],
+        infographicLink: '/assets/projects/SDLC_Compliance_Agent/SDLC_Compliance_Agent.png',
+        architectureLink: '/assets/projects/SDLC_Compliance_Agent/SDLC_Compliance_Agent.pdf',
+        features: []
+    },
+    {
+        id: 1,
         title: 'Autonomous Supply Chain Agentic Orchestration',
         description: 'Proprietary enterprise logistics platform featuring autonomous document parsing and agentic legacy data migrations.',
         tech: ['Google Agent Engine', 'LangGraph', 'LlamaIndex', 'FAISS', 'OpenTelemetry (OTEL)', 'Vertex AI Endpoints', 'Cloud Run', 'Oracle PL/SQL', 'Self-Healing Agents', 'Reflection Loops'],
@@ -19,7 +53,7 @@ const projects = [
         features: []
     },
     {
-        id: 1,
+        id: 2,
         title: 'Distributed Multi-Agent Research Orchestrator',
         description: 'A sovereign NotebookLM-inspired agentic ecosystem built with Google ADK and LangGraph, consolidated into a Cloud Run Monolithic Single-Container with LlamaIndex and MCP RAG.',
         tech: [
@@ -65,7 +99,7 @@ const projects = [
         ]
     },
     {
-        id: 2,
+        id: 3,
         title: 'Specialized Drug Interaction LLM: Fine-Tuning & GCP Deployment',
         description: 'An interactive AI chatbot showcasing MLOps from training to production on Google Cloud.',
         tech: ['Llama 3.1 8B', 'Unsloth', 'PEFT (LoRA)', 'SFT', 'Gradio', 'Vertex AI Endpoints', 'Weights & Biases'],
@@ -83,7 +117,7 @@ const projects = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         title: 'Generative Bid Agent: Enterprise RFP Intelligence System',
         description: 'Multi-Modal RAG system using "Triangle of Truth" reasoning to synthesize high-fidelity RFP responses.',
         tech: ['Google Agent Development Kit (ADK)', 'Vertex AI Search', 'Gemini 3.0 Pro', 'Next.js 15', 'Arize Phoenix & Google Cloud Trace', 'Triangle of Truth Logic', 'Docker'],
@@ -113,7 +147,7 @@ const projects = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         title: 'GAIA Agent: General AI Assistant Orchestrator',
         description: 'High-complexity orchestrator capable of multi-step tool-use and deep information retrieval, proven against GAIA standards.',
         tech: ['LangGraph (StateGraph)', 'Mem0', 'HuggingFace Datasets', 'Gemini 2.5 Flash', 'Tavily Search', 'Wikipedia Tool'],
@@ -127,7 +161,7 @@ const projects = [
         features: []
     },
     {
-        id: 5,
+        id: 6,
         title: "Priya's AI Portfolio & Reasoning Engine",
         description: 'An Agentic Digital Twin portfolio built with Next.js and powered by a highly constrained, context-aware Gemini AI Assistant.',
         tech: ['Next.js 15', 'Gemini 2.5 Flash', 'Agentic Context Injection', 'Strict System Guardrails', 'Google Cloud Run', 'Docker'],
@@ -140,12 +174,12 @@ const projects = [
         features: []
     },
     {
-        id: 6,
+        id: 7,
+        fullWidth: true,
         title: 'Autonomous Career Operations Engine',
         description: 'End-to-End AI-Agentic Job Application Architecture built natively within the Antigravity IDE. It autonomously evaluates roles, generates tailored assets, and executes browser-based applications with deterministic state management.',
         tech: ['Antigravity IDE', 'Browser Subagent', 'SKILL.md Workflows', 'Python (urllib.parse)', 'YAML Database Management', 'Human-in-the-Loop (HITL)', 'Self-Healing Agents', 'Reflection Loops'],
         github: 'https://github.com/rprisram/Autonomous_Career_Engine_Public',
-        fullWidth: true,
         highlights: [
             'SKILL.md Agentic Separation: Replaces traditional monolithic prompting with modular SKILL.md files chained via Workflows. This avoids context bloating by only loading necessary skill modules on demand.',
             'Zero API / Token Costs: Driven entirely within the Antigravity IDE, bypassing expensive external API dependencies by dynamically leveraging the model quota (Claude and Gemini families) available from the AI Coding Assistant.',
