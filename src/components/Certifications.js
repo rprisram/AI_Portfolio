@@ -2,6 +2,12 @@ import styles from './Certifications.module.css';
 
 const certifications = [
     {
+        title: 'Claude Certified Associate – Foundations',
+        issuer: 'Anthropic',
+        date: '2026',
+        link: 'https://www.credly.com/badges/cf2af6ce-0994-4ce9-ac2c-c2faa64c192b/public_url'
+    },
+    {
         title: 'Post Graduate Program in Artificial Intelligence and Machine Learning',
         issuer: 'University of Texas, McCombs School of Business',
         date: 'July 2024 - April 2025',
