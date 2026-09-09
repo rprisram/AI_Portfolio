@@ -2,6 +2,13 @@ import styles from './Experience.module.css';
 
 const experiences = [
     {
+        role: 'AI Engineering Architect',
+        company: 'Cyclotron',
+        period: 'JUN 2026 - Present',
+        desc: 'AI Engineering Architect on a multi-workstream Azure AI Foundry enablement engagement for a top-25 U.S. regional bank. Owns prompt design, evaluation engine, hallucination mitigation, and agent architecture recommendations across Azure AI Foundry platform and SDLC compliance agent.',
+        accent: 'var(--accent-primary)'
+    },
+    {
         role: 'Generative AI Architect & Engineer',
         company: 'KSAP Technologies',
         period: 'FEB 2024 - MAR 2026',

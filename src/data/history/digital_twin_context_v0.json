@@ -8,6 +8,12 @@
     },
     "career_timeline": [
         {
+            "period": "June 2026 - Present",
+            "role": "AI Engineering Architect",
+            "company": "Cyclotron",
+            "impact": "AI Engineering Architect on a multi-workstream Azure AI Foundry enablement engagement for a top-25 U.S. regional bank. Owns prompt design, the evaluation engine, hallucination mitigation, and agent architecture recommendations across two workstreams: an Azure AI Foundry platform (Anthropic Claude via Azure AI Foundry MaaS, brokered through an Azure API Management AI Gateway with private networking, Entra ID authentication, and zero standing secrets) and an SDLC compliance agent that scores Solution Architecture Documents against a versioned, governance-owned rubric with a full production audit trail."
+        },
+        {
             "period": "Feb 2024 - March 2026",
             "role": "Generative AI Architect & Engineer",
             "company": "KSAP Technologies",
